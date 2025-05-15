@@ -1,0 +1,207 @@
+/* <style>
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+</style> */
+:root {
+    --mainTextColor-light: #000;
+    --secondaryTextColor-light: rgb(51, 51, 51);
+    --mainLinkColor-light: #0da2b8;
+    --mainBoardColor-light: rgb(218, 218, 218, );
+    --mainBgColor-light: rgb(249, 250, 251);
+
+}
+
+[data-theme="dark"] {
+    --mainTextColor: #fff;
+    --secondaryTextColor: #adb0b1;
+    --mainLinkColor: rgb(30, 190, 214);
+    --mainBoardColor: #2b3031;
+    --mainBgColor: #131415;
+
+}
+
+* {
+    font-family: 'Readex pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    background-color: var(--mainBgColor);
+     align-items: center; 
+}
+
+#theme-switcher {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.theme {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 1px solid;
+}
+
+.theme:hover {
+    width: 33px;
+    height: 33px;
+}
+
+#theme-dark {
+    background-color: #000;
+}
+
+#theme-light {
+    background-color: #fff;
+}
+
+p,
+span,
+li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+#container-main, .section--page {
+    margin: 0 auto;
+    width: 50%;
+    padding: 1em;
+
+}
+
+.section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#bio,
+a {
+    font-weight: 300;
+
+}
+
+#user-name {
+    font-size: 48px;
+    line-height: 1rem;
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#email {
+    color: var(--mainTextColor);
+}
+
+#social--list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-direction: wrap;
+
+}
+
+#social--list a {
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+#social--list a:hover {
+    font-weight: 100;
+    color: var(--mainLinkColor);
+    font-size: 0.9em;
+}
+
+#qualification--list {
+    list-style: none;
+
+}
+
+.card--teachstack {
+    border: 1px solid var(--mainBoardColor);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.card--work--history {
+    border-left: 1 px solid var(--mainBoardColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+}
+
+.line-break {
+    background-color: var(--mainBoardColor);
+    height: 1px;
+}
+ll
+.card--project {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1 px solid var(--mainBgColor);
+}
+
+.card--project a {
+    color: var(--mainTextColor);
+    transition: 0.3s;
+}
+
+.card--project a:hover {
+    color: rgb(30, 190, 214);
+}
+
+@media (max-width:600px) {
+    .section--page {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-top: 3em;
+    }
+
+    #wrapper--hero {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    #wrapper--hero {
+        flex-direction: column;
+    }
+
+    .card--work--history {
+        border-left: none;
+        padding-left: 0;
+    }
+}
